@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="calorimetermain.css">
+    <link rel="stylesheet" type="text/css" href="base.css">
+		<script>document.documentElement.className = "js";
+var supportsCssVars = function supportsCssVars() {
+  var e,
+      t = document.createElement("style");
+  return t.innerHTML = "root: { --tmp-var: bold; }", document.head.appendChild(t), e = !!(window.CSS && window.CSS.supports && window.CSS.supports("font-weight", "var(--tmp-var)")), t.parentNode.removeChild(t), e;
+};
+</script>
+
+
+</head>
+<body>
+  <div class="wrapper">
+    <header>
+       <nav >
+          
+          <div class="logo">
+             FITOFY
+          </div>
+          <div class="menu">
+             <ul>
+                <li><a href="/index.html">Home</a></li>
+              
+                
+                <li><a href="/calorie_page/index.html">CALORIEMETER</a></li>
+                <li><a href="/yogapage/index.html">Yoga</a></li>
+                <li><a href="/workoutpage/index.html">Workout</a></li>
+                <li><a href='https://ris2505.github.io/rishabhjain.github.io/#'>Contact</a></li>
+             </ul>
+          </div>
+       </nav>
+    </header>
+
+
+
+   
+<div class="pink">
+
+<div class="hover_anime_box">
+<div class="content">
+    <div class="grid grid--img">
+        <div class="grid__item pos-1"><div class="grid__item-img" style="background-image:url(1.dc197a9a.jpg);"></div></div>
+        <div class="grid__item pos-2"><div class="grid__item-img" style="background-image:url(2.3ca6bb44.jpg);"></div></div>
+        <div class="grid__item pos-3"><div class="grid__item-img" style="background-image:url(3.a433b89d.jpg);"></div></div>
+        <div class="grid__item pos-4"><div class="grid__item-img" style="background-image:url(4.c6d96be5.jpg);"></div></div>
+        <div class="grid__item pos-5"><div class="grid__item-img" style="background-image:url(5.689b68fd.jpg);"></div></div>
+        <div class="grid__item pos-6"><div class="grid__item-img" style="background-image:url(6.e96dcfff.jpg);"></div></div>
+        <div class="grid__item pos-7"><div class="grid__item-img" style="background-image:url(7.2d66e3ed.jpg);"></div></div>
+        <div class="grid__item pos-8"><div class="grid__item-img" style="background-image:url(8.f4323fe0.jpg);"></div></div>
+        <div class="grid__item pos-9"><div class="grid__item-img" style="background-image:url(9.c9233dac.jpg);"></div></div>
+        <div class="grid__item pos-10"><div class="grid__item-img" style="background-image:url(10.5e22fdc3.jpg);"></div></div>
+    </div>
+    <h1 class="ml12">Caloriemeter</h1>
+    <h1 class="ml13">Just NAME the food.</h1>
+    <h1 class="ml14">and we provide you with your daily CALORIES!</h1>
+</div>
+</div>
+
+<svg class="cursor" width="80" height="80" viewBox="0 0 80 80">
+<circle class="cursor__inner" cx="40" cy="40" r="20"></circle>
+</svg>
+</div>
+
+
+
+<div class="second_calorie">
+  <div class="result">
+    <h1 id="resulthere">Your Calories are:</h1>
+</div>
+<button class="ab" onclick="fun(1)">Calculate</button>
+<button class="ab2" onclick="funn(1)" >Clear</button>
+
+ 
+
+
+<button class="dropdown-btn" >Beverages 
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container"style="left:10%; top:10%">
+<ul>
+ <li>
+    <label for="type">Milk Tea</label><input id="milk_tea" class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity(cup)</label>
+    <input name="milk_tea" class="second" type="number" id="milk_teaq" min="0" max="50" onClick="calculate(this.name)">
+</li>
+<li>
+    <label for="type">Green Tea</label><input id="green_tea" class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" id="green_teaq" type="number"  name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Milk</label><input class="first" id="milk"  type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="milkq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Milkshake</label><input id="milkshake" class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="milkshakeq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Fruit Juice</label><input id="fruitjuice" class="first" type="checkbox">
+    <label class="labelleft" class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="fruitjuiceq" name="quantity" min="0" max="50">
+</li>
+
+<li>
+    <label for="type">Soup</label><input class="first" type="checkbox">
+    <label class="labelleft"  for="quantity"> Quantity</label>
+    <input class="second" type="number" id="soupq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Cold Drink</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="colddrinkq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Beer</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="beerq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Alcohol</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="alcoholq" name="quantity" min="0" max="50">
+</li>
+</ul>
+
+</div>
+
+<button class="dropdown-btn" >Fruits 
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+<ul>
+ <li>
+    <label for="type">Banana</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="bananaq" name="quantity" min="0" max="50">
+</li>
+<li>
+    <label for="type">Orange</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="orangeq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Mango</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="mangoq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Pear</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="pearq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Apple</label><input class="first" type="checkbox">
+    <label class="labelleft" class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="appleq" name="quantity" min="0" max="50">
+</li>
+
+<li>
+    <label for="type">Watermelon(avg)</label><input class="first" type="checkbox">
+    <label class="labelleft"  for="quantity"> Quantity</label>
+    <input class="second" type="number" id="watermelonq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Lichi(few)</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="lichiq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Grapes(bowl)</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="grapesq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Strawberry(bowl)</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="strawberryq" name="quantity" min="0" max="50">
+</li>
+</ul>
+
+</div>
+<button class="dropdown-btn" >Snacks 
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+<ul>
+ <li>
+    <label for="type">Samosa</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="samosaq" name="quantity" min="0" max="50">
+</li>
+<li>
+    <label for="type">Sandwich</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="sandwichq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Biscuit</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="biscuitq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">French Fries</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="frenchfriesq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Sweet</label><input class="first" type="checkbox">
+    <label class="labelleft" class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="sweetq" name="quantity" min="0" max="50">
+</li>
+
+<li>
+    <label for="type">Pudding</label><input class="first" type="checkbox">
+    <label class="labelleft"  for="quantity"> Quantity</label>
+    <input class="second" type="number" id="puddingq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Dry Fruit</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity" > Quantity(handfull)</label>
+    <input class="second" type="number" id="dryfruitq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Chips</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity(pack)</label>
+    <input class="second" type="number" id="chipsq" name="quantity" min="0" max="50">
+</li>
+ 
+</ul>
+
+</div>
+
+
+
+
+
+
+<button class="dropdown-btn" >Breads 
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+<ul>
+ <li>
+    <label for="type">Bread</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="breadq" name="quantity" min="0" max="50">
+</li>
+<li>
+    <label for="type">Poori</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="pooriq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Roti</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="rotiq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Paratha</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="parathaq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Aloo Paratha</label><input class="first" type="checkbox">
+    <label class="labelleft" class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="alooparathaq" name="quantity" min="0" max="50">
+</li>
+
+<li>
+    <label for="type">Pav</label><input class="first" type="checkbox">
+    <label class="labelleft"  for="quantity"> Quantity</label>
+    <input class="second" type="number" id="pavq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Naan</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="naanq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Butter Naan</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="butternaanq" name="quantity" min="0" max="50">
+</li>
+ 
+</ul>
+
+</div>
+
+
+
+<button class="dropdown-btn">Gravy/vegetables 
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+<ul>
+ <li>
+    <label for="type">Daal</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="daalq" name="quantity" min="0" max="50">
+</li>
+<li>
+    <label for="type">Mix Vegetable</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="mixvegetableq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Capsicum</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="capsicumq" name="quantity" min="1" max="50">
+</li>
+ <li>
+    <label for="type">Tomato</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="tomatoq" name="quantity" min="1" max="50">
+</li>
+ <li>
+    <label for="type">Bottle Gourd</label><input class="first" type="checkbox">
+    <label class="labelleft" class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="bottlegourdq" name="quantity" min="0" max="50">
+</li>
+
+<li>
+    <label for="type">Spinach</label><input class="first" type="checkbox">
+    <label class="labelleft"  for="quantity"> Quantity</label>
+    <input class="second" type="number" id="spinachq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Soya beans</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="soyabeansq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Lady Finger</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="ladyfingerq" name="quantity" min="0" max="50">
+</li>
+<li>
+    <label for="type">Cabbage</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="cabbageq" name="quantity" min="0" max="50">
+</li>
+<li>
+    <label for="type">Cauliflower</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="cauliflowerq" name="quantity" min="1" max="50">
+</li>
+<li>
+    <label for="type">Palak Paneer</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="palakpaneerq" name="quantity" min="1" max="50">
+</li>
+<li>
+    <label for="type">Sweet potato</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="sweetpotatoq" name="quantity" min="1" max="50">
+</li>
+ <li>
+    <label for="type">Mushrooms</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="mushroomq" name="quantity" min="0" max="50">
+</li>
+</ul>
+
+</div>
+
+
+
+<button class="dropdown-btn">Animal Products 
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+<ul>
+ <li>
+    <label for="type">Egg</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="eggq" name="quantity" min="0" max="50">
+</li>
+<li>
+    <label for="type">Meat(plate)</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="meatq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Ghee(tablespoon)</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="gheeq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Omelette</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="omeletteq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Tandoori Chicken(plate)</label><input class="first" type="checkbox">
+    <label class="labelleft" class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="tandoorichickenq" name="quantity" min="0" max="50">
+</li>
+
+<li>
+    <label for="type">Butter Chicken</label><input class="first" type="checkbox">
+    <label class="labelleft"  for="quantity"> Quantity</label>
+    <input class="second" type="number" id="butterchickenq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Fish</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="fishq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Salmon</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="salmonq" name="quantity" min="0" max="50">
+</li>
+<li>
+    <label for="type">Prawn</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="prawnq" name="quantity" min="0" max="50">
+</li>
+<li>
+    <label for="type">Pork</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="porkq" name="quantity" min="0" max="50">
+</li>
+ 
+</ul>
+
+</div>
+
+
+
+<button class="dropdown-btn">Indian Dishes 
+<i class="fa fa-caret-down"></i>
+</button>
+<div class="dropdown-container">
+<ul>
+ <li>
+    <label for="type">Plain Dosa</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="plaindosaq" name="quantity" min="0" max="50">
+</li>
+<li>
+    <label for="type">Masala Dosa</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="masaladosaq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Idli</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="idliq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Pickles</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="picklesq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Boiled Rice(cup)</label><input class="first" type="checkbox">
+    <label class="labelleft" class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="boiledriceq" name="quantity" min="0" max="50">
+</li>
+
+<li>
+    <label for="type">Raita</label><input class="first" type="checkbox">
+    <label class="labelleft"  for="quantity"> Quantity</label>
+    <input class="second" type="number" id="raitaq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Chhole Bhature</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="chholebhatureq" name="quantity" min="0" max="50">
+</li>
+ <li>
+    <label for="type">Pav Bhaji</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="pavbhajiq" name="quantity" min="0" max="50">
+</li>
+<li>
+    <label for="type">Halwa</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="halwaq" name="quantity" min="0" max="50">
+</li>
+
+<li>
+    <label for="type">Aloo tikki</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="alootikkiq" name="quantity" min="0" max="50">
+</li>
+<li>
+    <label for="type">Kachori</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="kachoriq" name="quantity" min="0" max="50">
+</li>
+<li>
+    <label for="type">Momos(1)</label><input class="first" type="checkbox">
+    <label class="labelleft" for="quantity"> Quantity</label>
+    <input class="second" type="number" id="momosq" name="quantity" min="0" max="50">
+</li>
+ 
+</ul>
+
+</div>
+
+</div>
+
+
+</div>
+
+
+<script src="https://lesscss.googlecode.com/files/less-1.0.30.min.js"></script>
+<script src="demo3.b516845c.js"></script>
+<script src="../src/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+
+    <script>
+        // Wrap every letter in a span
+var textWrapper = document.querySelector('.ml12');
+var textWrapper2 = document.querySelector('.ml13');
+var textWrapper3 = document.querySelector('.ml14');
+textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+textWrapper3.innerHTML = textWrapper3.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: false})
+  .add({
+    targets: '.ml12 .letter',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 500 + 30 * i
+  })/*.add({
+    targets: '.ml12 .letter',
+    translateX: [0,-30],
+    opacity: [1,0],
+    easing: "easeInExpo",
+    duration: 1100,
+    delay: (el, i) => 100 + 30 * i
+  });*/
+
+  anime.timeline({loop: false})
+  .add({
+    targets: '.ml13 .letter',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 1500 + 30 * i
+  });
+
+  anime.timeline({loop: false})
+  .add({
+    targets: '.ml14 .letter',
+    translateX: [40,0],
+    translateZ: 0,
+    opacity: [0,1],
+    easing: "easeOutExpo",
+    duration: 1200,
+    delay: (el, i) => 2500 + 30 * i
+  });
+        burger = document.getElementById("burger");
+    box1 = document.getElementById("box1");
+
+    /*var myScrollFunc2 = function () {
+    var y = window.scrollY;
+    if (y <=100) {
+        burger.className = "burger animate_burger"
+        
+    } else {
+        burger.className = "burger";
+        
+    }
+};*/
+
+
+document.addEventListener("click", e => {
+  const isDropdownButton = e.target.matches("[data-dropdown-button]")
+  if (!isDropdownButton && e.target.closest("[data-dropdown]") != null) return
+
+  let currentDropdown
+  if (isDropdownButton) {
+    currentDropdown = e.target.closest("[data-dropdown]")
+    currentDropdown.classList.toggle("active")
+  }
+
+  document.querySelectorAll("[data-dropdown].active").forEach(dropdown => {
+    if (dropdown === currentDropdown) return
+    dropdown.classList.remove("active")
+  })
+})
+    </script>
+
+    <script>
+
+
+
+
+
+      var dropdown = document.getElementsByClassName("dropdown-btn");
+  var i;
+  
+  for (i = 0; i < dropdown.length; i++) {
+    dropdown[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var dropdownContent = this.nextElementSibling;
+    if (dropdownContent.style.display === "block") {
+    dropdownContent.style.display = "none";
+    } else {
+    dropdownContent.style.display = "block";
+    }
+    });
+  }
+   
+   var total=0;
+  
+  function calculate(name) {
+    var quantity= document.getElementById(name).value;
+      
+    //total=total+food[name]*quantity    ;        // Function returns the product of a and b
+  };
+  
+  
+  
+  function funn()
+  {
+    document.getElementById("resulthere").innerHTML='0';
+    total=0;
+  }
+  
+  
+  function fun(uu){
+  let aa=document.getElementById("milk_teaq").value;
+  let ac=document.getElementById("green_teaq").value;
+  let ad=document.getElementById("milkq").value;
+  let ae=document.getElementById("milkshakeq").value;
+  let af=document.getElementById("fruitjuiceq").value;
+  let ag=document.getElementById("soupq").value;
+  let ah=document.getElementById("colddrinkq").value;
+  let ai=document.getElementById("beerq").value;
+  let aj=document.getElementById("alcoholq").value;
+  let ak=document.getElementById("orangeq").value;
+  let al=document.getElementById("bananaq").value;
+  let am=document.getElementById("mangoq").value;
+  let an=document.getElementById("strawberryq").value;
+  let ao=document.getElementById("pearq").value;
+  let ap=document.getElementById("watermelonq").value;
+  let aq=document.getElementById("lichiq").value;
+  let ar=document.getElementById("grapesq").value;
+  let as=document.getElementById("samosaq").value;
+  let at=document.getElementById("sandwichq").value;
+  let au=document.getElementById("momosq").value;
+  let av=document.getElementById("biscuitq").value;
+  let aw=document.getElementById("frenchfriesq").value;
+  let ax=document.getElementById("sweetq").value;
+  let ay=document.getElementById("puddingq").value;
+  let az=document.getElementById("dryfruitq").value;
+  let ba=document.getElementById("chipsq").value;
+  let bb=document.getElementById("breadq").value;
+  let bc=document.getElementById("rotiq").value;
+  let bd=document.getElementById("parathaq").value;
+  let be=document.getElementById("pooriq").value;
+  let bf=document.getElementById("naanq").value;
+  let bg=document.getElementById("butternaanq").value;
+  let bh=document.getElementById("pavq").value;
+  let bi=document.getElementById("daalq").value;
+  let bj=document.getElementById("mixvegetableq").value;
+  let bk=document.getElementById("capsicumq").value;
+  let bl=document.getElementById("tomatoq").value;
+  let bm=document.getElementById("bottlegourdq").value;
+  let bn=document.getElementById("spinachq").value;
+  let bo=document.getElementById("cabbageq").value;
+  let bp=document.getElementById("cauliflowerq").value;
+  let bq=document.getElementById("soyabeansq").value;
+  let br=document.getElementById("ladyfingerq").value;
+  let bs=document.getElementById("palakpaneerq").value;
+  let bt=document.getElementById("sweetpotatoq").value;
+  let bu=document.getElementById("mushroomq").value;
+  let bv=document.getElementById("eggq").value;
+  let bw=document.getElementById("gheeq").value;
+  let bx=document.getElementById("meatq").value;
+  let by=document.getElementById("butterchickenq").value;
+  let bz=document.getElementById("tandoorichickenq").value;
+  let ca=document.getElementById("porkq").value;
+  let cb=document.getElementById("fishq").value;
+  let cc=document.getElementById("prawnq").value;
+  let cd=document.getElementById("omeletteq").value;
+  let ce=document.getElementById("salmonq").value;
+  let cf=document.getElementById("plaindosaq").value;
+  let cg=document.getElementById("masaladosaq").value;
+  let ch=document.getElementById("idliq").value;
+  let ci=document.getElementById("picklesq").value;
+  let cj=document.getElementById("boiledriceq").value;
+  let ck=document.getElementById("raitaq").value;
+  let cl=document.getElementById("chholebhatureq").value;
+  let cm=document.getElementById("pavbhajiq").value;
+  let cn=document.getElementById("halwaq").value;
+  let co=document.getElementById("alootikkiq").value;
+  let cp=document.getElementById("kachoriq").value;
+  
+  
+  total+=(aa*45)+(ac*3)+(ad*60)+(ae*200)+(af*120)+(ag*32)+(ah*90)+(ai*200)+(aj*75)+(ak*110)+(al*37)+(am*42)+(an*25)+(ao*50)+(ap*20)+(aq*53)+(ar*60)+(as*140)+(at*250)+(au*35)+(av*30)+(aw*427)+(ax*150)+(ay*200)+(az*600)+(ba*120)+(bb*45)+(bc*100)+(bd*150)+(be*75)+(bf*261)+(bg*310)+(bh*180)+(bi*150)+(bj*200)+(bk*16)+(bl*10)+(bm*60)+(bn*24)+(bo*60)+(bp*150)+(bq*173)+(br*150)+(bs*200)+(bt*86)+(bu*296)+(bv*75)+(bw*45)+(bx*450)+(by*490)+(bz*260)+(ca*242)+(cb*140)+(cc*65)+(cd*20)+(ce*208)+(cf*120)+(cg*250)+(ch*39)+(ci*30)+(cj*120)+(ck*25)+(cl*420)+(cm*400)+(cn*469)+(co*265)+(cp*180);
+  
+  document.getElementById("resulthere").innerHTML=total;
+  };
+  
+  
+
+  
+      </script>
+</body>
+</html>
